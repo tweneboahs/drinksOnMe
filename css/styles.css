@@ -1,0 +1,115 @@
+:root {
+  --ff-primary: "M+PLUS+Rounded+1c", sans-serif;
+  --ff-secondary: monospace;
+  --accent-color: rgba(78, 182, 125, 0.24);
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3;
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-reg);
+  box-sizing: border-box;
+}
+
+/*Header*/
+
+.header {
+  background-color: var(--accent-color);
+  padding: 1em 2em;
+  text-align: center;
+}
+
+input {
+  border: none;
+  border-bottom: rgb(133, 132, 132) solid 2px;
+  background-color: white;
+  padding: 0.5em;
+  font-family: var(--ff-primary);
+}
+
+#start-btn {
+  background-color: white;
+  padding: 0.5em 1em;
+  border: gray 2px solid;
+  border-radius: 1em;
+}
+
+#start-btn:hover {
+  border: green 2px solid;
+  cursor: pointer;
+}
+/*Error Message*/
+
+#error-message {
+  justify-content: center;
+}
+
+/*Main content of where drinks are shown*/
+
+#drinks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1.5rem;
+  margin: 2em;
+}
+
+.drink-card {
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  background-color: #f8f8f8;
+  box-shadow: 5px 5px 5px gray;
+  border-radius: 1em;
+}
+
+.drink-info-basic {
+  display: grid;
+  grid-auto-columns: 1fr;
+  align-items: end;
+  padding: 4rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+.drink-info-basic-img {
+  margin: auto;
+  height: 15rem;
+}
+
+.drink-info-howto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*The width and height of the info appearing on top of the card is based on the padding represented here*/
+  padding: 1.5rem;
+  width: calc(100% - (1.5rem * 2));
+  height: calc(100% - (1.5rem * 2));
+  /**/
+  background: white;
+  overflow: auto;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.drink-info-howto:hover {
+  opacity: 0.9;
+  border-radius: 1em;
+  border: 1px solid green;
+}
+
+hr {
+  height: 1px;
+  background-color: green;
+}
+
+/*Error Message*/
+
+#error {
+  text-align: center;
+}
