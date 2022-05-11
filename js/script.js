@@ -22,7 +22,6 @@ function getIngredients(ingredients, measurements){
     return list
 }
 
-//wyzant to help you build you code
 
 function getDrink(e) {
 
